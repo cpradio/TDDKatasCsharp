@@ -3,7 +3,7 @@
 namespace Tests
 {
 	[TestFixture]
-	public class Example
+	public class EvenOrOddTests
 	{
 		[Test]
 		public void should_describe_a_test()

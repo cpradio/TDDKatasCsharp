@@ -52,8 +52,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Example.cs" />
+    <Compile Include="AgeGroup\AgeGroupTests.cs" />
+    <Compile Include="CenturyFromYear\CenturyFromYearTests.cs" />
+    <Compile Include="ComplementaryDNA\ComplementaryDNATests.cs" />
+    <Compile Include="CreditCardMask\CreditCardMaskTests.cs" />
+    <Compile Include="DNAtoRNA\DNAtoRNATests.cs" />
+    <Compile Include="EvenOrOdd\EvenOrOddTests.cs" />
+    <Compile Include="HighestAndLowest\HighestAndLowestTests.cs" />
+    <Compile Include="ItsASquare\ItsASquareTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidateCouponCode\ValidateCouponCodeTests.cs" />
+    <Compile Include="VowelCount\VowelCountTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,18 +73,7 @@
       <Name>Katas</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AgeGroup\" />
-    <Folder Include="CenturyFromYear\" />
-    <Folder Include="ComplementaryDNA\" />
-    <Folder Include="CreditCardMask\" />
-    <Folder Include="DNAtoRNA\" />
-    <Folder Include="EvenOrOdd\" />
-    <Folder Include="HighestAndLowest\" />
-    <Folder Include="ItsASquare\" />
-    <Folder Include="ValidateCouponCode\" />
-    <Folder Include="VowelCount\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

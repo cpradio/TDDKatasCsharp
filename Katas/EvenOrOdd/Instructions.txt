@@ -1,0 +1,12 @@
+﻿Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+Examples:
+Given:
+	2 
+Return:
+	Even
+
+Given:
+	5
+Return:
+	Odd

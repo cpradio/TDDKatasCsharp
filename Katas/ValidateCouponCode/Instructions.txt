@@ -1,0 +1,21 @@
+﻿Your online stores likes to give out coupons, but people are trying to cheat the system. 
+
+A valid coupon is in the format of NNNNLLLLL-NN (4 numbers indicating the current year, followed by 5 indicating the first 5 letters of a month name, followed by a hyphen, then by 2 numbers).
+
+Write a method that validates if a user provided string is a valid coupon code or not.
+
+Examples:
+Given:
+	2018ABCDE-01
+Return:
+	false
+
+Given:
+	2018JANUA-00
+Return:
+	true
+
+Given:
+	2017FEBRU-00
+Return:
+	false

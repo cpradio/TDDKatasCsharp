@@ -1,0 +1,25 @@
+﻿Assign the person to a group based on their age.
+
+Ages 1-2:   Infant
+Ages 3-4:   Toddler
+Ages 5-11:  Child
+Age  12:    Preteen
+Ages 13-18: Teenager
+Ages 19-25:	Young Adult
+Ages 26-55: Adult
+Ages 56+:   Senior
+
+Notes:
+Should validate input provided is a positive number, return ArgumentException if it is 0 or below.
+Should only expect a whole number
+
+Examples:
+Given:
+	2
+Return:
+	Infant
+
+Given:
+	23
+Return:
+	Young Adult

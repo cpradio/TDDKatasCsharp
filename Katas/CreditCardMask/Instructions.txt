@@ -1,0 +1,21 @@
+﻿Change all but the last 4 characters of a valid credit card number to '#'
+
+Notes:
+
+Validate the credit card is 16 numbers, throw an ArgumentException if it isn't
+
+Examples:
+Given:
+	1234567812345678
+Return:
+	############5678
+
+Given:
+	abcd123456781234
+Return:
+	null
+
+Given:
+	12345678
+Return:
+	null

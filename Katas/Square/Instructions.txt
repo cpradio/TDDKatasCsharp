@@ -1,0 +1,21 @@
+﻿Check if the provided number is a perfect square
+
+Notes:
+Return false if the number is less than 0
+Return true if the number is a perfect square
+
+Examples:
+Given:
+	-1
+Return:
+	false
+
+Given:
+	0
+Return:
+	true
+
+Given:
+	25
+Return:
+	true

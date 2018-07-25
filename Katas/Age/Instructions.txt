@@ -5,7 +5,7 @@ Ages 3-4:   Toddler
 Ages 5-11:  Child
 Age  12:    Preteen
 Ages 13-18: Teenager
-Ages 19-25:	Young Adult
+Ages 19-25:	College Bound
 Ages 26-55: Adult
 Ages 56+:   Senior
 

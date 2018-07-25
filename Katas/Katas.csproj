@@ -43,16 +43,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AgeGroup\Instructions.txt" />
-    <Content Include="CenturyFromYear\Instructions.txt" />
-    <Content Include="ComplementaryDNS\Instructions.txt" />
-    <Content Include="CreditCardMask\Instructions.txt" />
-    <Content Include="DNAtoRNA\Instructions.txt" />
+    <Content Include="Age\Instructions.txt" />
+    <Content Include="Year\Instructions.txt" />
+    <Content Include="DNA\Instructions.txt" />
+    <Content Include="CreditCard\Instructions.txt" />
+    <Content Include="RNA\Instructions.txt" />
     <Content Include="EvenOrOdd\Instructions.txt" />
+    <Content Include="FizzBuzz\Instructions.txt" />
     <Content Include="HighestAndLowest\Instructions.txt" />
-    <Content Include="IsItASquare\Instructions.txt" />
-    <Content Include="ValidateCouponCode\Instructions.txt" />
-    <Content Include="VowelCount\Instructions.txt" />
+    <Content Include="Square\Instructions.txt" />
+    <Content Include="CouponCode\Instructions.txt" />
+    <Content Include="Vowels\Instructions.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

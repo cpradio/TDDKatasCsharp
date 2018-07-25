@@ -52,17 +52,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgeGroup\AgeGroupTests.cs" />
-    <Compile Include="CenturyFromYear\CenturyFromYearTests.cs" />
-    <Compile Include="ComplementaryDNA\ComplementaryDNATests.cs" />
-    <Compile Include="CreditCardMask\CreditCardMaskTests.cs" />
-    <Compile Include="DNAtoRNA\DNAtoRNATests.cs" />
+    <Compile Include="Age\AgeTests.cs" />
+    <Compile Include="Year\YearTests.cs" />
+    <Compile Include="DNA\DNATests.cs" />
+    <Compile Include="CreditCard\CreditCardTests.cs" />
+    <Compile Include="RNA\RNATests.cs" />
     <Compile Include="EvenOrOdd\EvenOrOddTests.cs" />
+    <Compile Include="FizzBuzz\FizzBuzzTests.cs" />
     <Compile Include="HighestAndLowest\HighestAndLowestTests.cs" />
-    <Compile Include="ItsASquare\ItsASquareTests.cs" />
+    <Compile Include="Square\SquareTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidateCouponCode\ValidateCouponCodeTests.cs" />
-    <Compile Include="VowelCount\VowelCountTests.cs" />
+    <Compile Include="CouponCode\CouponCodeTests.cs" />
+    <Compile Include="Vowels\VowelsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

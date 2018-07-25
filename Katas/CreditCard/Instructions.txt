@@ -2,6 +2,8 @@
 
 Notes:
 
+Input will be a string
+Card Number can contain spaces (spaces should be removed).
 Validate the credit card is 16 numbers, throw an ArgumentException if it isn't
 
 Examples:
@@ -11,11 +13,16 @@ Return:
 	############5678
 
 Given:
+	1234 5678 1234 5678
+Return:
+	############5678
+
+Given:
 	abcd123456781234
 Return:
-	null
+	ArgumentException
 
 Given:
 	12345678
 Return:
-	null
+	ArgumentException

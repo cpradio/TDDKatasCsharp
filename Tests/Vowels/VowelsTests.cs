@@ -18,7 +18,7 @@ namespace Tests
 		//[TestCase("aeiou are the vowels to use", 13)]
 		//public void should_return_the_number_of_vowels_found_in_the_string(string input, int expectedResult)
 		//{
-		//	Assert.AreEqual(expectedResult, Vowels.Count(number));
+		//	Assert.AreEqual(expectedResult, Vowels.Count(input));
 		//}
 	}
 }

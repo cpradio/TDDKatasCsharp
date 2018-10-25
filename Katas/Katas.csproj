@@ -68,12 +68,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mocking\DataAccess\Controllers\SubmissionsController.cs" />
     <Compile Include="Mocking\DataAccess\Controllers\KatasController.cs" />
     <Compile Include="Mocking\DataAccess\Contexts\DatabaseContext.cs" />
     <Compile Include="Mocking\DataAccess\Entities\Katas.cs" />
     <Compile Include="Mocking\DataAccess\Entities\Submission.cs" />
     <Compile Include="Mocking\DataAccess\Contexts\IDatabaseContext.cs" />
+    <Compile Include="Mocking\DataAccess\Models\SubmissionsViewModel.cs" />
     <Compile Include="Mocking\DataAccess\Models\KatasViewModel.cs" />
+    <Compile Include="Mocking\DataAccess\Models\SubmissionViewModel.cs" />
     <Compile Include="Mocking\DataAccess\Models\KataViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

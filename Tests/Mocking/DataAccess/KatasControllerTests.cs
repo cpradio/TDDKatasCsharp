@@ -44,6 +44,7 @@ namespace Tests
 			_katasController = new KatasController();
 			_katasController.Context = mockDb.Object;
 		}
+
 		private static List<Kata> SetupMultipleKatas()
 		{
 			var loadKatas = new List<Kata>();

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Katas.DataAccess.Models
+namespace Katas.Mocking.DataAccess.Models
 {
 	public class KataViewModel
 	{

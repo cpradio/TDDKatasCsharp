@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Web.Mvc;
-using Katas.DataAccess;
-using Katas.DataAccess.Controllers;
-using Katas.DataAccess.Entities;
-using Katas.DataAccess.Entitites;
-using Katas.DataAccess.Models;
+using Katas.Mocking.DataAccess.Contexts;
+using Katas.Mocking.DataAccess.Controllers;
+using Katas.Mocking.DataAccess.Entities;
+using Katas.Mocking.DataAccess.Entitites;
+using Katas.Mocking.DataAccess.Models;
 using Moq;
 using NUnit.Framework;
 
 namespace Tests
 {
 	[TestFixture]
-	public class DbContextTests
+	public class KatasControllerTests
 	{
 		private KatasController _katasController;
 		private void SetupKatasController(List<Kata> dataToLoad = null)

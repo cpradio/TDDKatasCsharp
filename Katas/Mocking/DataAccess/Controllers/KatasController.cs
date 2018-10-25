@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
-using Katas.DataAccess.Entitites;
-using Katas.DataAccess.Models;
+using Katas.Mocking.DataAccess.Contexts;
+using Katas.Mocking.DataAccess.Entitites;
+using Katas.Mocking.DataAccess.Models;
 
-namespace Katas.DataAccess.Controllers
+namespace Katas.Mocking.DataAccess.Controllers
 {
 	public class KatasController : Controller
 	{

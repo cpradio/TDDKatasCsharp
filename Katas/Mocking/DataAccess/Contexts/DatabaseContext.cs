@@ -1,12 +1,8 @@
-﻿using Katas.DataAccess.Entitites;
-using System;
+﻿using Katas.Mocking.DataAccess.Entitites;
 using System.Data.Entity;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
-using Katas.DataAccess.Entities;
+using Katas.Mocking.DataAccess.Entities;
 
-namespace Katas.DataAccess
+namespace Katas.Mocking.DataAccess.Contexts
 {
 	public class DatabaseContext : DbContext, IDatabaseContext
 	{

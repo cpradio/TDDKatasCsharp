@@ -1,10 +1,9 @@
 ﻿using System;
-using Katas.DataAccess.Entitites;
+using Katas.Mocking.DataAccess.Entitites;
 using System.Data.Entity;
-using System.Diagnostics;
-using Katas.DataAccess.Entities;
+using Katas.Mocking.DataAccess.Entities;
 
-namespace Katas.DataAccess
+namespace Katas.Mocking.DataAccess.Contexts
 {
 	public interface IDatabaseContext : IDisposable
     {

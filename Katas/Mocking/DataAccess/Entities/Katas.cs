@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Katas.DataAccess.Entities;
+using Katas.Mocking.DataAccess.Entities;
 
-namespace Katas.DataAccess.Entitites
+namespace Katas.Mocking.DataAccess.Entitites
 {
 	[Table("Katas")]
 	public class Kata

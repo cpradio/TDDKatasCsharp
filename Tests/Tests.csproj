@@ -94,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Age\AgeTests.cs" />
-    <Compile Include="DataAccess\KatasControllerTests.cs" />
+    <Compile Include="Mocking\DataAccess\KatasControllerTests.cs" />
     <Compile Include="Year\YearTests.cs" />
     <Compile Include="DNA\DNATests.cs" />
     <Compile Include="CreditCard\CreditCardTests.cs" />

@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using Katas.Mocking.DataAccess.Contexts;
 using Katas.Mocking.DataAccess.Entities;
 using Katas.Mocking.DataAccess.Models;
+using Katas.Mocking.Extensions;
+using Katas.Mocking.Service;
 
 namespace Katas.Mocking.DataAccess.Controllers
 {
@@ -25,6 +27,13 @@ namespace Katas.Mocking.DataAccess.Controllers
 			}
 			set { _db = value; }
 		}
+
+		public IKataService KataServiceClient
+		{
+			get => _kataServiceClient ?? (_kataServiceClient = new KataServiceClient());
+			set => _kataServiceClient = value;
+		}
+		private IKataService _kataServiceClient;
 
 		// GET: Batches
 		public ActionResult Index(int? kataId, int? pageNumber)
@@ -46,6 +55,22 @@ namespace Katas.Mocking.DataAccess.Controllers
 			_submissionsViewModel.CurrentPageNumber = selectedPageNumber;
 			_submissionsViewModel.EndPageNumber = Convert.ToInt32(Math.Ceiling((Convert.ToDouble(activeRecordCount) / Convert.ToDouble(RECORDS_PER_PAGE))));
 			return View(_submissionsViewModel);
+		}
+
+		public ActionResult LaunchDetails(int? id)
+		{
+			if (id == null)
+				return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+			var term = Context.Submissions.Find(id);
+			if (term == null)
+				return HttpNotFound();
+			
+			var returnUrl = KataServiceClient.GetSubmissionUrl(term.BinarySerialize());
+			if (returnUrl == null || returnUrl.Trim().Length == 0)
+				return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+			return Redirect(returnUrl);
 		}
 
 		internal IEnumerable<SubmissionViewModel> GetViewModel(IEnumerable<Submission> submissions)

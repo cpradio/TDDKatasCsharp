@@ -9,6 +9,7 @@ using Katas.Mocking.DataAccess.Controllers;
 using Katas.Mocking.DataAccess.Entities;
 using Katas.Mocking.DataAccess.Entitites;
 using Katas.Mocking.DataAccess.Models;
+using Katas.Mocking.Service;
 using Moq;
 using NUnit.Framework;
 
@@ -62,8 +63,12 @@ namespace Tests
 			mockDb.Setup(m => m.Submissions).Returns(mockSubmission.Object);
 			mockDb.Setup(m => m.Katas).Returns(mockKata.Object);
 
+			var mockKataServiceClient = new Mock<IKataService>();
+			mockKataServiceClient.Setup(s => s.GetSubmissionUrl(It.IsAny<byte[]>())).Returns("http://localhost.grangeagent.com/Katas/SubmissionResults.aspx");
+
 			_submissionsController = new SubmissionsController();
 			_submissionsController.Context = mockDb.Object;
+			_submissionsController.KataServiceClient = mockKataServiceClient.Object;
 		}
 
 		private static List<Submission> SetupSubmissionsForSpecificPage()
@@ -153,6 +158,26 @@ namespace Tests
 			Assert.IsTrue(result.Model is SubmissionsViewModel);
 			Assert.AreEqual(2, ((SubmissionsViewModel)result.Model).CurrentPageNumber);
 			Assert.AreEqual(14, ((SubmissionsViewModel)result.Model).Submissions.Count());
+		}
+
+		[Test]
+		public void request_launch_submission_details_for_a_valid_submission()
+		{
+			Setup();
+			var result = _submissionsController.LaunchDetails(1);
+
+			Assert.IsTrue(result is RedirectResult);
+			Assert.AreEqual("http://localhost.grangeagent.com/Katas/SubmissionResults.aspx", ((RedirectResult)result).Url);
+		}
+
+		[Test]
+		public void request_launch_submission_details_for_an_invalid_submission()
+		{
+			Setup();
+			var result = _submissionsController.LaunchDetails(2);
+
+			Assert.IsTrue(result is HttpStatusCodeResult);
+			Assert.AreEqual((int)HttpStatusCode.NotFound, ((HttpStatusCodeResult)result).StatusCode);
 		}
 	}
 }

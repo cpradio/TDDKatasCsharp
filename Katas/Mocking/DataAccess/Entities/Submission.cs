@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Katas.Mocking.DataAccess.Entities
 {
 	[Table("Submissions")]
+	[Serializable]
 	public class Submission
 	{
 		[Display(Name = "Submission ID")]

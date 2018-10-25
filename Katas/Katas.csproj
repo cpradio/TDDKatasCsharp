@@ -81,6 +81,10 @@
     <Compile Include="Mocking\DataAccess\Models\SubmissionViewModel.cs" />
     <Compile Include="Mocking\DataAccess\Models\KataViewModel.cs" />
     <Compile Include="Mocking\Extensions\SerializeExtension.cs" />
+    <Compile Include="Mocking\Objects\Extensions\SubmissionExtension.cs" />
+    <Compile Include="Mocking\Objects\Logic\SubmissionLogic.cs" />
+    <Compile Include="Mocking\Objects\Wrapper\ISubmissionWrapper.cs" />
+    <Compile Include="Mocking\Objects\Wrapper\SubmissionWrapper.cs" />
     <Compile Include="Mocking\Service\IKataService.cs" />
     <Compile Include="Mocking\Service\KataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

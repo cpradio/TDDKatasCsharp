@@ -96,6 +96,7 @@
     <Compile Include="Age\AgeTests.cs" />
     <Compile Include="Mocking\DataAccess\SubmissionsControllerTests.cs" />
     <Compile Include="Mocking\DataAccess\KatasControllerTests.cs" />
+    <Compile Include="Mocking\Objects\SubmissionLogicTests.cs" />
     <Compile Include="Year\YearTests.cs" />
     <Compile Include="DNA\DNATests.cs" />
     <Compile Include="CreditCard\CreditCardTests.cs" />

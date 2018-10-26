@@ -12,6 +12,7 @@ using Katas.Mocking.DataAccess.Models;
 using Katas.Mocking.Service;
 using Moq;
 using NUnit.Framework;
+using Tests.Mocking.Fake;
 
 namespace Tests
 {
@@ -164,6 +165,8 @@ namespace Tests
 		public void request_launch_submission_details_for_a_valid_submission()
 		{
 			Setup();
+			// using a Fake
+			//_submissionsController.KataServiceClient = new FakeKataService();
 			var result = _submissionsController.LaunchDetails(1);
 
 			Assert.IsTrue(result is RedirectResult);

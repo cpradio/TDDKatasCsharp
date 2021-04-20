@@ -65,7 +65,7 @@ namespace Tests
 			mockDb.Setup(m => m.Katas).Returns(mockKata.Object);
 
 			var mockKataServiceClient = new Mock<IKataService>();
-			mockKataServiceClient.Setup(s => s.GetSubmissionUrl(It.IsAny<byte[]>())).Returns("http://localhost.grangeagent.com/Katas/SubmissionResults.aspx");
+			mockKataServiceClient.Setup(s => s.GetSubmissionUrl(It.IsAny<byte[]>())).Returns("http://localhost/Katas/SubmissionResults.aspx");
 
 			_submissionsController = new SubmissionsController();
 			_submissionsController.Context = mockDb.Object;
@@ -170,7 +170,7 @@ namespace Tests
 			var result = _submissionsController.LaunchDetails(1);
 
 			Assert.IsTrue(result is RedirectResult);
-			Assert.AreEqual("http://localhost.grangeagent.com/Katas/SubmissionResults.aspx", ((RedirectResult)result).Url);
+			Assert.AreEqual("http://localhost/Katas/SubmissionResults.aspx", ((RedirectResult)result).Url);
 		}
 
 		[Test]

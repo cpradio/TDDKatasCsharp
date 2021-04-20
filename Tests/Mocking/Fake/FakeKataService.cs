@@ -6,7 +6,7 @@ namespace Tests.Mocking.Fake
 	{
 		public string GetSubmissionUrl(byte[] entitiesDto)
 		{
-			return "http://localhost.grangeagent.com/Katas/SubmissionResults.aspx";
+			return "http://localhost/Katas/SubmissionResults.aspx";
 		}
 
 		public byte[] ProcessSubmission(byte[] entitiesDto)
